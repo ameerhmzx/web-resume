@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.pattern {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #e0e0e0;
+  opacity: 0.3;
+  background-image: radial-gradient(
+    #000000 1.4000000000000001px,
+    #e0e0e0 1.4000000000000001px
+  );
+  background-size: 28px 28px;
+}
+
+.container {
+  max-width: min(80%, 1500px);
+  background-color: white;
+  width: 100%;
+  margin: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 16px 16px 32px 0 #00000060;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px 32px;
+  background-color: black;
+}
+
+.header > div {
+  margin: 8px 16px;
+}
+
+#profile-picture {
+  width: 150px;
+  height: 150px;
+  margin: 32px 16px;
+  border: 5px double white;
+  border-radius: 16px;
+  content: url("https://media-exp1.licdn.com/dms/image/C5603AQFpat1QGguisQ/profile-displayphoto-shrink_200_200/0/1602088346402?e=1619654400&v=beta&t=xKAO-gc-B0nCyH4jrOCDwCteU6rDdR99Hh33W5tG6ik");
+  filter: grayscale();
+  transition-duration: 1s;
+}
+
+#profile-picture:hover {
+  filter: grayscale(0);
+  transition-duration: 1s;
+}
+
+#name {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#designation {
+  margin-top: -2px;
+  font-weight: 100;
+  color: white;
+  font-variant-caps: all-small-caps;
+}
+
+#aboutme {
+  font-size: 12px;
+  color: white;
+  max-width: 400px;
+}
+
+.sub-header {
+  background-color: #000000d0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sub-header img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  transform: translateY(-2px);
+}
+
+.sub-header a:hover {
+  opacity: 1;
+}
+
+.sub-header a {
+  opacity: 0.7;
+  margin: 0 16px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.container-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px 32px;
+  margin-bottom: 32px;
+}
+
+.container-body > div {
+  max-width: 500px;
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  width: 100%;
+  padding-top: 64px;
+}
+
+.container-body h3,
+.container-body p {
+  margin: 0;
+}
+
+.container-body h2 {
+  display: inline;
+}
+
+.container-body h3 {
+  margin-top: 4px;
+}
+
+.container-body a {
+  text-decoration-color: #000000;
+  color: #000000;
+}
+
+.container-body > div img {
+  margin-right: 4px;
+  transform: translateY(4px);
+  width: 25px;
+}
+
+.timestamp {
+  color: gray;
+  font-size: 12px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #00000090;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
